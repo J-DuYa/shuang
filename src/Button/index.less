@@ -1,0 +1,110 @@
+@btn-prefix-cls: ~'shuang-btn';
+@btn-height-lg: 40px;
+@btn-height-sm: 24px;
+@btn-height-base: 32px;
+
+.@{btn-prefix-cls} {
+  margin-right: 8px;
+  margin-bottom: 12px;
+  position: relative;
+  display: inline-block;
+  font-weight: 400;
+  white-space: nowrap;
+  text-align: center;
+  background-image: none;
+  border: 1px solid transparent;
+  box-shadow: 0 2px #00000004;
+  cursor: pointer;
+  transition: all .3s cubic-bezier(.645,.045,.355,1);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  touch-action: manipulation;
+  height: @btn-height-base;
+  line-height: @btn-height-base - 10px;
+  padding: 4px 15px;
+  font-size: 14px;
+  border-radius: 2px;
+  color: #000000d9;
+  border-color: #d9d9d9;
+  background: #fff;
+
+  &-primary {
+    &:hover {
+      color: #fff;
+      border-color: #40a9ff;
+      background: #40a9ff;
+    }
+    color: #fff;
+    border-color: #1890ff;
+    background: #1890ff;
+    text-shadow: 0 -1px 0 rgb(0 0 0 / 12%);
+    box-shadow: 0 2px #0000000b;
+  }
+
+  &-warning {
+    &:hover {
+      color: #fff;
+      border-color: #ff880082;
+      background: #ff880082;
+    }
+    color: #fff;
+    border-color: #ff8800;
+    background: #ff8800;
+    text-shadow: 0 -1px 0 rgb(0 0 0 / 12%);
+    box-shadow: 0 2px #0000000b;
+  }
+
+  &-error {
+    &:hover {
+      color: #fff;
+      border-color: #ff7875;
+      background: #ff7875;
+    }
+    color: #fff;
+    border-color: #ff4d4f;
+    background: #ff4d4f;
+    text-shadow: 0 -1px 0 rgb(0 0 0 / 12%);
+    box-shadow: 0 2px #0000000b;
+  }
+
+  &-link {
+    color: #1890ff;
+    border-color: transparent;
+    background: 0 0;
+    box-shadow: none;
+  }
+
+  &-background-ghost {
+    color: #1890ff;
+    border-color: #1890ff;
+  }
+
+  &-lg {
+    height: @btn-height-lg;
+    line-height: @btn-height-lg - 10px;
+  }
+
+  &-sm {
+    height: @btn-height-sm;
+    line-height: @btn-height-sm - 10px;
+  }
+  
+  &-loading {
+    position: relative;
+    cursor: default;
+    &::before {
+      position: absolute;
+      inset: -1px;
+      z-index: 1;
+      display: block;
+      background: #fff;
+      border-radius: inherit;
+      opacity: .35;
+      transition: opacity .2s;
+      content: "";
+      pointer-events: none;
+    }
+  }
+}
